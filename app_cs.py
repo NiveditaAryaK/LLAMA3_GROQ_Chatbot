@@ -50,7 +50,7 @@ def summarize_chat(history):
     return summary
 
 # Streamlit app setup
-st.title("Groq Chat Assistant")
+st.title("ChatBot")
 
 if "history" not in st.session_state:
     st.session_state["history"] = []
