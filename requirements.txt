@@ -1,0 +1,5 @@
+groq
+streamlit
+transformers
+torch
+python_dotenv
