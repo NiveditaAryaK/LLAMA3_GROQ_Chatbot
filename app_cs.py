@@ -9,7 +9,7 @@ client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
 system_prompt = {
     "role": "system",
-    "content": "You are a useful assistant. I reply with efficient answers.",
+    "content": "You are a useful assistant. You reply with efficient answers. If you are not sure about the answer, ask for additional information or say you are not aware of it.",
 }
 
 def chat_groq(message, summary):
@@ -28,7 +28,7 @@ def chat_groq(message, summary):
         model="llama3-8b-8192",
         messages=messages,
         max_tokens=1024,
-        temperature=0.4,
+        temperature=0.8,
         stream=True,
     )
 
