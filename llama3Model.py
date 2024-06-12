@@ -8,7 +8,7 @@ client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
 system_prompt = {
     "role": "system",
-    "content": "You are a helpful assistant. You reply with efficient answers. Ask for additional information if you are not confident about the answer.",
+    "content": "You are a helpful assistant. You reply with efficient answers.",
 }
 
 def chat_groq(message, summary):
