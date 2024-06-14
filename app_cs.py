@@ -1,7 +1,7 @@
 from llama3Model import chat_groq,summarize_chat
 import streamlit as st
 # Streamlit app setup
-st.title("ChatBot")
+st.title("Hindi To English Translator")
 
 if "history" not in st.session_state:
     st.session_state["history"] = []
@@ -25,14 +25,14 @@ def submit():
         st.session_state["summary"] = summarize_chat(st.session_state["history"])
 
 # Input text field
-st.text_area("Enter your message:", key="user_input", on_change=submit)
+st.text_area("Enter your text:", key="user_input", on_change=submit)
 
 # Display the current output prompt if available
 if "current_prompt" in st.session_state:
     st.write(st.session_state["current_prompt"])
 
 # Display Chat Summary with expander
-with st.expander("Chat Summary"):
+with st.expander("translation"):
     st.write(st.session_state["summary"])
 
 # Display Chat History with expander
