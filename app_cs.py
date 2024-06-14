@@ -32,7 +32,7 @@ if "current_prompt" in st.session_state:
     st.write(st.session_state["current_prompt"])
 
 # Display Chat Summary with expander
-with st.expander("translation"):
+with st.expander("Translation"):
     st.write(st.session_state["summary"])
 
 # Display Chat History with expander
